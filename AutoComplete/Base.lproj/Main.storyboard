@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4CG-Sa-fJr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="NzG-cw-gjA">
+            <objects>
+                <viewController id="4CG-Sa-fJr" customClass="ViewController" customModule="AutoComplete" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xzq-ey-Rv6"/>
+                        <viewControllerLayoutGuide type="bottom" id="QFU-yY-DRU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6iH-ZB-POJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HyB-qY-SLG">
+                                <rect key="frame" x="16" y="143" width="343" height="504"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Jeb-58-5Py"/>
+                                    <constraint firstAttribute="height" constant="128" id="jQx-Je-9Xr"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="tOL-zc-Thv" style="IBUITableViewCellStyleDefault" id="MSy-DB-NYy">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MSy-DB-NYy" id="S5t-6m-vcU">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tOL-zc-Thv">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jQx-Je-9Xr"/>
+                                        <exclude reference="Jeb-58-5Py"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="52J-Xh-YAh">
+                                <rect key="frame" x="16" y="28" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Xbi-4r-p4i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="HyB-qY-SLG" secondAttribute="leading" id="3rM-Qf-o5c"/>
+                            <constraint firstItem="QFU-yY-DRU" firstAttribute="top" secondItem="HyB-qY-SLG" secondAttribute="bottom" constant="20" id="Ckm-h8-hTN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="52J-Xh-YAh" secondAttribute="trailing" id="U45-Di-IxW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="52J-Xh-YAh" secondAttribute="leading" id="aYx-Wv-u9t"/>
+                            <constraint firstItem="HyB-qY-SLG" firstAttribute="top" secondItem="52J-Xh-YAh" secondAttribute="bottom" constant="15" id="bFZ-8n-pxZ"/>
+                            <constraint firstItem="52J-Xh-YAh" firstAttribute="top" secondItem="Xzq-ey-Rv6" secondAttribute="bottom" constant="8" id="dz0-sT-hFz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HyB-qY-SLG" secondAttribute="trailing" id="uuO-p7-noP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="HyB-qY-SLG" id="Gjq-ph-Dkh"/>
+                        <outlet property="textView" destination="52J-Xh-YAh" id="lgE-FF-Uu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gER-rg-c4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="445.72713643178412"/>
+        </scene>
+    </scenes>
+</document>
